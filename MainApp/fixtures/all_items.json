@@ -1,0 +1,56 @@
+[
+{
+    "model": "MainApp.item",
+    "pk": 1,
+    "fields": {
+        "name": "Кроссовки",
+        "brand": "abibas",
+        "count": 10
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 2,
+    "fields": {
+        "name": "Видеокарта",
+        "brand": "NVidia",
+        "count": 3
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 3,
+    "fields": {
+        "name": "Носки",
+        "brand": "Nike",
+        "count": 15
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 4,
+    "fields": {
+        "name": "АвтоматАК-47",
+        "brand": "Калашникова",
+        "count": 20
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 5,
+    "fields": {
+        "name": "Петарда",
+        "brand": "C4",
+        "count": 31
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 6,
+    "fields": {
+        "name": "Салют",
+        "brand": "ТОС-1 Буратино",
+        "count": 0
+    }
+}
+]

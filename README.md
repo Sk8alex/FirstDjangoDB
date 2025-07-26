@@ -37,7 +37,10 @@ python manage.py dumpdata MainApp --indent 4 > MainApp/fixtures/all_items.json
 ```
 python manage.py loaddata MainApp/fixtures/all_items.json
 ```
-
+### Очистка БД
+```
+python manage.py flush -v 3
+```
 
 ## Дополнительно
 1. Полезное расширение для шаблонов: `django`
