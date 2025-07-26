@@ -15,5 +15,7 @@
         {% for item in items %}
             <li><a href='/item/{{ item.id }}' > {{ item.name }} </a></li>
         {% endfor %}
+        <p>Имя: {{ item.name }}</p>
+        <p>Бренд: {{ item.brand }}</p>
     </ol>
 </body>
