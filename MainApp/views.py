@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound
 from MainApp.models import Item
 
+
 # Create your views here.
 
 # def home(request):
@@ -28,7 +29,6 @@ def home(request) -> HttpResponse:
 """
 
 
-
 def about(request):
     author = {
         "name": "Иван",
@@ -44,21 +44,19 @@ def about(request):
 
 
 
-
-
-
 def get_item(request, item_id: int):
     """ По указанному id возвращает элемент из списка"""
-    item = Item.objects.get(id=item_id)
-    context = {"item": item}
-    return render(request, "item_page.html", context)
+    #context = {"item": Item.objects.get(id=item_id)}
+    #item = Item.objects.get(id=item_id)
+    #context = {"item": item}
+    return render(request, "item_page.html", context = {"item": Item.objects.get(id=item_id)})
+    #return render(request, "item_page.html", context)
     #return render(request, "errors.html", {"errors": [f'Item with id={item_id} not found']})
 
 
 def get_items(request):
-    items = Item.objects.all()
-    context = {"item": items}
-    return render(request, "items_list.html", context)
+    #context = {"items": Item.objects.all()}
+    return render(request, "items_list.html", context = {"items": Item.objects.all()})
 
 
 # Проверка урла
