@@ -5,7 +5,8 @@
     "fields": {
         "name": "Кроссовки",
         "brand": "abibas",
-        "count": 10
+        "count": 10,
+        "description": "беговые"
     }
 },
 {
@@ -14,25 +15,28 @@
     "fields": {
         "name": "Видеокарта",
         "brand": "NVidia",
-        "count": 3
+        "count": 3,
+        "description": "ляляля"
     }
 },
 {
     "model": "MainApp.item",
     "pk": 3,
     "fields": {
-        "name": "Носки",
+        "name": "носки",
         "brand": "Nike",
-        "count": 15
+        "count": 15,
+        "description": "Норм носки)))"
     }
 },
 {
     "model": "MainApp.item",
     "pk": 4,
     "fields": {
-        "name": "АвтоматАК-47",
+        "name": "Автомат АК-47",
         "brand": "Калашникова",
-        "count": 20
+        "count": 20,
+        "description": "+ 3 рожка(пустых)"
     }
 },
 {
@@ -41,7 +45,8 @@
     "fields": {
         "name": "Петарда",
         "brand": "C4",
-        "count": 31
+        "count": 31,
+        "description": "Акция 3 штуки в одни руки"
     }
 },
 {
@@ -50,7 +55,8 @@
     "fields": {
         "name": "Салют",
         "brand": "ТОС-1 Буратино",
-        "count": 0
+        "count": 0,
+        "description": "Жжёт не по-детски"
     }
 }
 ]

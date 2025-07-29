@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    <head>
-        <a href="/">Home</a> / <a href="/about">About</a> / <a href="/items">Items</a> 
-    </head>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Main page {% endblock  %}
+
+{% block content %}
+    {{ block.super }}
+
     <h1>Страница автора</h1>
     {# Пример коммента #}
     {% comment %} Это тоже комментарий {% endcomment %}
@@ -18,11 +16,5 @@
         Фамилия: {{ author.last_name }}<br>
         телефон: {{ author.phone }}<br>
         email: {{ author.email }}<br>
-    <footer>
-        <br>
-        <br>
-        <br>
-        <h5 align="center"> ООО "Мясная лавка ТОП 1!!!"</h1>
-    </footer>
-</body>
-</html>
+
+{% endblock %}
