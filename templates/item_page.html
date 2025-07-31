@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %} Item page {% endblock  %}
+{% load static %}
+
+{% block title %} Item page {% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/color.css' %}">
+{% endblock  %}
 
 {% block content %}
-
-{{ block.super}}
-
+    {{ block.super }}
 
     <h2> Имя: {{ item.name | capfirst }} </h2>
     <div>
-        <p> Количество: {{ item.count | default:"товар отсутствует."}} </p>
+        <p> Количество: {{ item.count | default:"товар отсутствует." }} </p>
     </div>
     <div>
         <p>Бренд: {{ item.brand }}</p>
@@ -18,4 +22,15 @@
         <p>Описание: {{ item.description }}</p>
     </div>   
 
-{% endblock %}
+    <h3> Цвета: </h3>
+    <ul class='ul_no_mark'>
+        {% for color in colors %}
+            <li> 
+                <span class="color-box" style='background-color: {{ color.name }};'></span>
+                {{ color.name }}    
+            </li>       
+        {% empty %}
+            Информация по цветам отсутствует.
+        {% endfor %}
+    </ul>
+{% endblock  %}

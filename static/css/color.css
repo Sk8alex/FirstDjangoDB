@@ -1,0 +1,12 @@
+.color-box {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border: middle;
+    vertical-align: middle;
+}
+
+.ul_no_mark {
+    list-style-type: none;
+}

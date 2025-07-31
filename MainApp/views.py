@@ -52,8 +52,13 @@ def get_item(request, item_id: int):
     except ObjectDoesNotExist:
         return render(request, "errors.html", {'errors': [f'Item with id={item_id} not found']})
     else:
-        return render(request, "item_page.html", {"item": Item.objects.get(id=item_id)})
-
+        colors = item.colors.all()
+        context = {
+            "item": item,
+            "colors": colors,
+        }
+        #return render(request, "item_page.html", {"item": Item.objects.get(id=item_id)}, {"colors": item.colors.all()})
+        return render(request, "item_page.html", context)
 
 def get_items(request):
     return render(request, "items_list.html", {"items": Item.objects.all()})
